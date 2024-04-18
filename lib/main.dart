@@ -65,10 +65,6 @@ class _MinimalLiteRefState extends State<MinimalLiteRef> {
                 value: live,
                 onChanged: (v) => toggleLive(),
               ),
-              Watch((context) {
-                final lapDist = liteRefFakeData(context).lapDist;
-                return Text('Lap Dist: $lapDist');
-              }),
               live
                   ? const LapDist()
                   : LiteRefScope(
